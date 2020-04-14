@@ -1,1 +1,6 @@
-<h1 class="cn"> Привет </h1>
+<h1 class="cn"> Все новости </h1>
+<% @posts.reverse.each do |p| %>
+	<%= p.name %> | 
+	<%= p.body %> |
+	<%= link_to "Читать", post_path(p) %><br>
+<%end%>
