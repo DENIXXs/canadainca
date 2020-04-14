@@ -1,15 +1,4 @@
 <h1>Новая статья</h1>
 
-<%= form_for :post, url: posts_path do |form| %>
-	<p>
-		<h4>Название</h4>
-		<%= form.text_field :name %>
-	</p>
-	<p>
-		<h4>Новость</h4>
-		<%= form.text_area :body %>
-	</p>
-	<p>
-		<%= form.submit "Сохранить" %>
-	</p>
-<%end%> 
+<%= render 'form' %>
+<%= link_to 'Back', posts_path %>
