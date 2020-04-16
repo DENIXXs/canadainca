@@ -1,6 +1,14 @@
 <div class="form-group">
 
-<%= form_with model: @post, local: true do |form| %>
+<% if @post.errors.any? %>
+	<ul class="alert alert-danger">
+		<% @post.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+<%= form_for @post do |form| %>
+
 	<p>
 		<h4>Название</h4>
 		<%= form.text_field :name, class: "form-control" %>
