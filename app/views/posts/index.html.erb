@@ -1,5 +1,7 @@
 <h1 class="cn"> Все новости </h1>
+<ul class="list-group">
 <% @posts.reverse.each do |p| %>
-	<%= p.name %> | 
-	<%= link_to "Читать", post_path(p) %><br>
+<li class="list-group-item">
+	<h4><%= p.name %> | <%= link_to "Читать", post_path(p) %><br> </h4> 
+</li>
 <%end%>

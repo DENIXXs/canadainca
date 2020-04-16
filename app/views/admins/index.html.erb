@@ -1,0 +1,7 @@
+<h1> Все новости </h1>
+<p><%= link_to "Создать Новость", new_admin_path, class: 'btn btn-primary'%></p>
+
+<% @posts.reverse.each do |post| %>
+<h4><%= post.name %></h4>
+<%= link_to 'Читать', admin_path(post)%>
+<% end %>

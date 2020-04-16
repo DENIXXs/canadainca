@@ -1,0 +1,9 @@
+<h1> Новость</h1>
+<br>
+<h3><%= @post.name %></h3>
+<p class = "news"><%= @post.body%></p>
+
+<%= link_to "Редактировать", edit_admin_path(@post), class: "btn btn-primary"%>
+
+<%= link_to 'Destroy', admin_path(@post), class: "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', admins_path, class: "btn btn-secondary" %>
